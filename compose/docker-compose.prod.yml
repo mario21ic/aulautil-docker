@@ -1,0 +1,7 @@
+version: '2'
+services:
+  nginx:
+    image: mynginx
+    ports:
+      - 8080:80
+

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    image: aulautil:nginx
+    build:
+      context: ./nginx
+    volumes:
+      - ./fpm:/apps
+    ports:
+      - 8080:80
+
+  fpm:
+    image: aulautil:fpm
+    build:
+      context: ./fpm
+    volumes:
+      - ./fpm:/apps

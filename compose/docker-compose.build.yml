@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nginx:
+    image: mynginx
+    build:
+      context: ./
+
+  web:
+    image: myweb
+    build:
+      context: ./
